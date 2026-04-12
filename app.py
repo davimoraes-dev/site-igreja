@@ -65,6 +65,9 @@ def init_db():
     conn.commit()
     conn.close()
 
+# Inicializa o banco ao importar (funciona tanto local quanto no Railway)
+init_db()
+
 @app.route('/')
 def index():
     return render_template('index.html')
