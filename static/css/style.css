@@ -1643,7 +1643,8 @@ ul { list-style: none; }
     .sobre-grid { grid-template-columns: 1fr; gap: 48px; }
     .sobre-imagem { display: none; }
     .pastor-card { grid-template-columns: 1fr; }
-    .pastor-foto { height: 300px; }
+    .pastor-foto { height: auto; min-height: 350px; }
+    .pastor-img { object-fit: contain; object-position: center top; }
     .pastor-info { padding: 32px; }
     .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
 }
