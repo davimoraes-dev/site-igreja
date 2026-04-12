@@ -8,7 +8,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 EMAIL_REMETENTE = 'ccristaumnovotempo@gmail.com'
-EMAIL_SENHA = 'whqnkzspshdbntoc'
+EMAIL_SENHA = 'krloiwcscwbjmmmc'
 EMAIL_DESTINO = 'ccristaumnovotempo@gmail.com'
 
 def enviar_email(assunto, corpo_html):
