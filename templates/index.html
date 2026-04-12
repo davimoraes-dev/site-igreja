@@ -1,0 +1,505 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+    <div class="hero-curva"></div>
+    <div class="hero-deco">
+        <svg class="hero-deco-svg" viewBox="0 0 1200 600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Canto inferior direito -->
+            <path d="M700,600 Q900,400 1200,480" stroke="rgba(201,168,76,0.35)" stroke-width="1.5" fill="none"/>
+            <path d="M600,600 Q850,360 1200,440" stroke="rgba(201,168,76,0.28)" stroke-width="1.5" fill="none"/>
+            <path d="M500,600 Q800,320 1200,400" stroke="rgba(201,168,76,0.22)" stroke-width="1.5" fill="none"/>
+            <path d="M400,600 Q760,290 1200,360" stroke="rgba(201,168,76,0.16)" stroke-width="1" fill="none"/>
+            <path d="M300,600 Q720,260 1200,320" stroke="rgba(201,168,76,0.11)" stroke-width="1" fill="none"/>
+            <path d="M150,600 Q680,230 1200,280" stroke="rgba(201,168,76,0.07)" stroke-width="1" fill="none"/>
+            <path d="M0,600 Q640,200 1200,240" stroke="rgba(201,168,76,0.05)" stroke-width="1" fill="none"/>
+            <!-- Canto inferior esquerdo -->
+            <path d="M0,500 Q200,400 400,480" stroke="rgba(201,168,76,0.2)" stroke-width="1.5" fill="none"/>
+            <path d="M0,540 Q220,420 450,510" stroke="rgba(201,168,76,0.15)" stroke-width="1" fill="none"/>
+            <path d="M0,580 Q240,440 500,560" stroke="rgba(201,168,76,0.1)" stroke-width="1" fill="none"/>
+            <!-- Lateral esquerda baixo -->
+            <path d="M0,420 Q150,380 280,430" stroke="rgba(201,168,76,0.15)" stroke-width="1" fill="none"/>
+            <path d="M0,460 Q160,410 300,455" stroke="rgba(201,168,76,0.1)" stroke-width="1" fill="none"/>
+            <!-- Lateral direita baixo -->
+            <path d="M1200,420 Q1050,380 920,430" stroke="rgba(201,168,76,0.15)" stroke-width="1" fill="none"/>
+            <path d="M1200,460 Q1040,410 900,455" stroke="rgba(201,168,76,0.1)" stroke-width="1" fill="none"/>
+        </svg>
+    </div>
+    <div class="hero-content">
+        <img src="{{ url_for('static', filename='img/foto8.png') }}" alt="Logo Comunidade Cristã Um Novo Tempo" class="hero-logo-clean">
+        <p class="hero-subtitulo">Pregando e Vivendo Evangelho de Cristo</p>
+        <div class="hero-btns">
+            <a href="#contato" class="btn-hero-primary">Sou Visitante</a>
+            <a href="#cultos" class="btn-hero-secondary">Ver Cultos</a>
+        </div>
+    </div>
+    <div class="hero-scroll">
+        <span>Role para baixo</span>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+</section>
+
+<!-- ===== CONTADOR PRÓXIMO CULTO ===== -->
+<section class="proximo-culto" id="proximo-culto">
+    <div class="container">
+        <div class="proximo-culto-inner">
+            <div class="proximo-culto-info">
+                <span class="section-tag">Não perca</span>
+                <h2>Próximo <span>Culto</span></h2>
+                <p id="proximo-nome">Carregando...</p>
+                <p id="proximo-local" class="proximo-local"></p>
+            </div>
+            <div class="contador-grid">
+                <div class="contador-item">
+                    <span id="cnt-dias">00</span>
+                    <label>Dias</label>
+                </div>
+                <div class="contador-sep">:</div>
+                <div class="contador-item">
+                    <span id="cnt-horas">00</span>
+                    <label>Horas</label>
+                </div>
+                <div class="contador-sep">:</div>
+                <div class="contador-item">
+                    <span id="cnt-min">00</span>
+                    <label>Min</label>
+                </div>
+                <div class="contador-sep">:</div>
+                <div class="contador-item">
+                    <span id="cnt-seg">00</span>
+                    <label>Seg</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== BANNER OFERTAS ===== -->
+
+<!-- ===== SOBRE ===== -->
+<section class="section sobre" id="sobre">
+    <div class="container">
+        <div class="sobre-grid">
+            <div class="sobre-texto">
+                <span class="section-tag">Quem Somos</span>
+                <h2 class="section-titulo">Uma Igreja que<br><span>Transforma Vidas</span></h2>
+                <p>A Comunidade Cristã Um Novo Tempo é uma igreja comprometida com o Evangelho de Jesus Cristo. Acreditamos que cada pessoa pode experimentar uma vida transformada pelo poder de Deus.</p>
+                <p>Nascemos com o propósito de ser uma família que acolhe, que adora e que serve. Aqui você encontrará um lugar onde pode crescer espiritualmente, desenvolver relacionamentos genuínos e descobrir o propósito que Deus tem para sua vida.</p>
+                <div class="sobre-valores">
+                    <div class="valor-item">
+                        <i class="fas fa-bible"></i>
+                        <div>
+                            <h4>Palavra</h4>
+                            <p>Fundamentados na verdade bíblica</p>
+                        </div>
+                    </div>
+                    <div class="valor-item">
+                        <i class="fas fa-hands-praying"></i>
+                        <div>
+                            <h4>Oração</h4>
+                            <p>Uma casa de oração para todas as nações</p>
+                        </div>
+                    </div>
+                    <div class="valor-item">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <h4>Comunidade</h4>
+                            <p>Família unida pelo amor de Cristo</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#contato" class="btn-sobre">Faça Parte da Nossa Família</a>
+            </div>
+            <div class="sobre-imagem">
+                <div class="slideshow">
+                    <img src="{{ url_for('static', filename='img/foto1.jpg') }}" class="slide active" alt="Foto da Igreja">
+                    <img src="{{ url_for('static', filename='img/foto2.jpg') }}" class="slide" alt="Foto da Igreja">
+                    <img src="{{ url_for('static', filename='img/foto3.jpg') }}" class="slide" alt="Foto da Igreja">
+                    <img src="{{ url_for('static', filename='img/foto4.jpg') }}" class="slide" alt="Foto da Igreja">
+                    <img src="{{ url_for('static', filename='img/foto5.jpg') }}" class="slide" alt="Foto da Igreja">
+                    <img src="{{ url_for('static', filename='img/foto6.jpg') }}" class="slide" alt="Foto da Igreja">
+                    <img src="{{ url_for('static', filename='img/IMG_9499.JPG.jpeg') }}" class="slide" alt="Foto da Igreja">
+                    <img src="{{ url_for('static', filename='img/IMG_9500.JPG.jpeg') }}" class="slide" alt="Foto da Igreja">
+                    <img src="{{ url_for('static', filename='img/IMG_9501.JPG.jpeg') }}" class="slide" alt="Foto da Igreja">
+                    <img src="{{ url_for('static', filename='img/IMG_9502.JPG.jpeg') }}" class="slide" alt="Foto da Igreja">
+                    <img src="{{ url_for('static', filename='img/IMG_9503.JPG.jpeg') }}" class="slide" alt="Foto da Igreja">
+                    <img src="{{ url_for('static', filename='img/IMG_9504.JPG.jpeg') }}" class="slide" alt="Foto da Igreja">
+                </div>
+                <div class="sobre-stat-card card-1">
+                    <h3>+10</h3>
+                    <p>Anos de história</p>
+                </div>
+                <div class="sobre-stat-card card-2">
+                    <h3>2</h3>
+                    <p>Congregações</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CULTOS ===== -->
+<section class="section cultos" id="cultos">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-tag">Programação</span>
+            <h2 class="section-titulo">Nossos <span>Cultos</span></h2>
+            <p class="section-desc">Venha adorar a Deus conosco. Você é sempre bem-vindo!</p>
+        </div>
+        <div class="cultos-grid">
+
+            <!-- Domingo -->
+            <div class="culto-card">
+                <div class="culto-icon">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <div class="culto-dia">Domingo</div>
+                <h3>Culto da Família</h3>
+                <div class="culto-horario">
+                    <i class="fas fa-clock"></i>
+                    <span>10h00</span>
+                </div>
+                <p>Culto da família com louvor, pregação da Palavra e comunhão</p>
+                <div class="culto-local">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Biritiba Mirim e Mogi das Cruzes</span>
+                </div>
+            </div>
+
+            <div class="culto-card">
+                <div class="culto-icon">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <div class="culto-dia">Domingo</div>
+                <h3>Culto da Família</h3>
+                <div class="culto-horario">
+                    <i class="fas fa-clock"></i>
+                    <span>18h00</span>
+                </div>
+                <p>Culto da família com louvor, pregação da Palavra e comunhão</p>
+                <div class="culto-local">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Biritiba Mirim</span>
+                </div>
+            </div>
+
+            <!-- Segunda -->
+            <div class="culto-card">
+                <div class="culto-icon">
+                    <i class="fas fa-hands-praying"></i>
+                </div>
+                <div class="culto-dia">Segunda-feira</div>
+                <h3>Culto de Oração</h3>
+                <div class="culto-horario">
+                    <i class="fas fa-clock"></i>
+                    <span>19h30</span>
+                </div>
+                <p>Noite dedicada à intercessão e comunhão com Deus</p>
+                <div class="culto-local">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Biritiba Mirim</span>
+                </div>
+            </div>
+
+            <!-- Quarta -->
+            <div class="culto-card">
+                <div class="culto-icon">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <div class="culto-dia">Quarta-feira</div>
+                <h3>Culto de Fé e Milagres</h3>
+                <div class="culto-horario">
+                    <i class="fas fa-clock"></i>
+                    <span>19h30</span>
+                </div>
+                <p>Culto de fé com poder e milagres do Espírito Santo</p>
+                <div class="culto-local">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Biritiba Mirim</span>
+                </div>
+            </div>
+
+            <!-- Sexta manhã -->
+            <div class="culto-card">
+                <div class="culto-icon">
+                    <i class="fas fa-cloud-sun"></i>
+                </div>
+                <div class="culto-dia">Sexta-feira</div>
+                <h3>Culto Manhã com Deus</h3>
+                <div class="culto-horario">
+                    <i class="fas fa-clock"></i>
+                    <span>07h00</span>
+                </div>
+                <p>Comece o dia na presença de Deus com louvor e oração</p>
+                <div class="culto-local">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Biritiba Mirim</span>
+                </div>
+            </div>
+
+            <!-- Sexta noite -->
+            <div class="culto-card">
+                <div class="culto-icon">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <div class="culto-dia">Sexta-feira</div>
+                <h3>Culto de Fé e Milagres</h3>
+                <div class="culto-horario">
+                    <i class="fas fa-clock"></i>
+                    <span>19h30</span>
+                </div>
+                <p>Culto de fé com poder e milagres do Espírito Santo</p>
+                <div class="culto-local">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Mogi das Cruzes</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="cultos-aviso">
+            <i class="fas fa-info-circle"></i>
+            <span>Confira as redes sociais para atualizações e eventos especiais: <a href="https://instagram.com/c.cristaumnovotempo" target="_blank">@c.cristaumnovotempo</a></span>
+        </div>
+    </div>
+</section>
+
+<!-- ===== LIDERANÇA ===== -->
+<section class="section lideranca" id="lideranca">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-tag">Liderança</span>
+            <h2 class="section-titulo">Quem Nos <span>Lidera</span></h2>
+        </div>
+        <div class="lideranca-content">
+            <div class="pastor-card">
+                <div class="pastor-foto">
+                    <img src="{{ url_for('static', filename='img/IMG_9506.PNG') }}" alt="Pr. Clayton" class="pastor-img">
+                    <div class="pastor-badge">
+                        <i class="fas fa-cross"></i>
+                        Pastor
+                    </div>
+                </div>
+                <div class="pastor-info">
+                    <span class="section-tag">Nossa Liderança</span>
+                    <h2>Pr. Clayton</h2>
+                    <p class="pastor-cargo">Pastor Titular — Comunidade Cristã Um Novo Tempo</p>
+                    <div class="pastor-divider"></div>
+                    <p>Com um coração voltado para o Evangelho e para as pessoas, o Pr. Clayton tem dedicado sua vida a proclamar a Palavra de Deus com fidelidade e amor. Sua visão é ver vidas transformadas pelo poder de Jesus Cristo.</p>
+                    <p>Acredita que a igreja é a família de Deus na terra, um lugar de acolhimento, crescimento e propósito. Sob sua liderança, a Comunidade Cristã Um Novo Tempo tem crescido e impactado comunidades em Biritiba Mirim e Mogi das Cruzes.</p>
+                    <div class="pastor-social">
+                        <a href="https://instagram.com/c.cristaumnovotempo" target="_blank" class="social-pastor">
+                            <i class="fab fa-instagram"></i>
+                            @c.cristaumnovotempo
+                        </a>
+                        <a href="https://www.instagram.com/prclaytonalmeida" target="_blank" class="social-pastor">
+                            <i class="fab fa-instagram"></i>
+                            @prclaytonalmeida
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ONDE ESTAMOS ===== -->
+<section class="section onde-estamos" id="onde-estamos">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-tag">Localização</span>
+            <h2 class="section-titulo">Onde <span>Estamos</span></h2>
+            <p class="section-desc">Temos duas unidades para receber você com todo amor</p>
+        </div>
+        <div class="enderecos-grid">
+            <div class="endereco-card">
+                <div class="endereco-header">
+                    <div class="endereco-numero">01</div>
+                    <div class="endereco-cidade">
+                        <h3>Biritiba Mirim</h3>
+                        <span>Sede Principal</span>
+                    </div>
+                </div>
+                <div class="endereco-body">
+                    <div class="endereco-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p>Rua Caetano Leme da Cunha Filho, 140</p>
+                            <p>Biritiba Mirim - SP</p>
+                        </div>
+                    </div>
+                    <div class="mapa-embed">
+                        <iframe src="https://maps.google.com/maps?q=Rua+Caetano+Leme+da+Cunha+Filho,+140,+Biritiba+Mirim,+SP&output=embed" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <a href="https://maps.google.com/?q=Rua+Caetano+Leme+da+Cunha+Filho,+140,+Biritiba+Mirim,+SP" target="_blank" class="btn-mapa">
+                        <i class="fas fa-directions"></i>
+                        Como Chegar
+                    </a>
+                </div>
+            </div>
+
+            <div class="endereco-card">
+                <div class="endereco-header">
+                    <div class="endereco-numero">02</div>
+                    <div class="endereco-cidade">
+                        <h3>Mogi das Cruzes</h3>
+                        <span>Congregação</span>
+                    </div>
+                </div>
+                <div class="endereco-body">
+                    <div class="endereco-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p>R. Dr. Deodato Wertheimer, 1818</p>
+                            <p>Centro, Mogi das Cruzes - SP</p>
+                        </div>
+                    </div>
+                    <div class="mapa-embed">
+                        <iframe src="https://maps.google.com/maps?q=R.+Dr.+Deodato+Wertheimer,+1818,+Centro,+Mogi+das+Cruzes,+SP&output=embed" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <a href="https://maps.google.com/?q=R.+Dr.+Deodato+Wertheimer,+1818,+Centro,+Mogi+das+Cruzes,+SP" target="_blank" class="btn-mapa">
+                        <i class="fas fa-directions"></i>
+                        Como Chegar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONTATO / VISITANTE ===== -->
+<section class="section contato" id="contato">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-tag">Contato</span>
+            <h2 class="section-titulo">Entre em <span>Contato</span></h2>
+            <p class="section-desc">Queremos conhecer você. Preencha o formulário abaixo!</p>
+        </div>
+
+        <div class="contato-grid">
+            <!-- Cadastro de Visitante -->
+            <div class="form-card" id="visitante">
+                <div class="form-card-header">
+                    <i class="fas fa-user-plus"></i>
+                    <h3>Sou Visitante</h3>
+                    <p>Cadastre-se e receba mais informações sobre a nossa igreja</p>
+                </div>
+                <form action="/visitante" method="POST" class="form-contato">
+                    <div class="form-group">
+                        <label for="nome">Nome completo *</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" id="cidade" name="cidade" placeholder="Sua cidade">
+                        </div>
+                        <div class="form-group">
+                            <label for="como_conheceu">Como nos conheceu?</label>
+                            <select id="como_conheceu" name="como_conheceu">
+                                <option value="">Selecione...</option>
+                                <option value="instagram">Instagram</option>
+                                <option value="indicacao">Indicação de amigo</option>
+                                <option value="google">Google</option>
+                                <option value="evento">Evento</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem (opcional)</label>
+                        <textarea id="mensagem" name="mensagem" rows="3" placeholder="Deixe uma mensagem para nós..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-form">
+                        <i class="fas fa-paper-plane"></i>
+                        Enviar Cadastro
+                    </button>
+                </form>
+            </div>
+
+            <!-- Pedido de Oração -->
+            <div class="form-card" id="oracao">
+                <div class="form-card-header oracao-header">
+                    <i class="fas fa-hands-praying"></i>
+                    <h3>Pedido de Oração</h3>
+                    <p>Compartilhe sua necessidade. Vamos orar por você com amor</p>
+                </div>
+                <form action="/oracao" method="POST" class="form-contato">
+                    <div class="form-group">
+                        <label for="nome_oracao">Seu nome *</label>
+                        <input type="text" id="nome_oracao" name="nome_oracao" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email_oracao">E-mail (opcional)</label>
+                        <input type="email" id="email_oracao" name="email_oracao" placeholder="seu@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="pedido">Seu pedido de oração *</label>
+                        <textarea id="pedido" name="pedido" rows="5" placeholder="Compartilhe sua necessidade com nossa equipe de oração..." required></textarea>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="privado" name="privado">
+                        <label for="privado">
+                            <i class="fas fa-lock"></i>
+                            Manter pedido privado (apenas para a liderança)
+                        </label>
+                    </div>
+                    <button type="submit" class="btn-form oracao-btn">
+                        <i class="fas fa-pray"></i>
+                        Enviar Pedido de Oração
+                    </button>
+                </form>
+
+                <div class="oracao-versiculos">
+                    <blockquote>
+                        "Confessai as vossas ofensas uns aos outros, e orai uns pelos outros, para serdes curados. Muito pode, por sua eficácia, a súplica do justo."
+                        <cite>— Tiago 5:16</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+        <!-- Redes Sociais -->
+        <div class="contato-redes">
+            <h3>Siga-nos nas redes sociais</h3>
+            <a href="https://instagram.com/c.cristaumnovotempo" target="_blank" class="rede-social-btn instagram">
+                <i class="fab fa-instagram"></i>
+                @c.cristaumnovotempo
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== INSTAGRAM ===== -->
+<section class="section instagram-section" id="instagram">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-tag">Redes Sociais</span>
+            <h2 class="section-titulo">Siga no <span>Instagram</span></h2>
+            <p class="section-desc">Acompanhe nossa programação e momentos especiais</p>
+        </div>
+        <div class="instagram-widget">
+            <behold-widget feed-id="4Cs1XM0ACiNQvvz1GpWL"></behold-widget>
+            <script>
+              (() => {
+                const d=document,s=d.createElement("script");s.type="module";
+                s.src="https://w.behold.so/widget.js";d.head.append(s);
+              })();
+            </script>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block title %}Contribuir — Comunidade Cristã Um Novo Tempo{% endblock %}
+
+{% block content %}
+<section class="contribuir-hero">
+    <div class="contribuir-overlay"></div>
+    <svg class="contribuir-deco-svg" viewBox="0 0 800 400" preserveAspectRatio="xMaxYMax meet" xmlns="http://www.w3.org/2000/svg">
+        <path d="M600,400 Q700,250 800,300" stroke="rgba(201,168,76,0.35)" stroke-width="1.5" fill="none"/>
+        <path d="M520,400 Q660,220 800,265" stroke="rgba(201,168,76,0.28)" stroke-width="1.5" fill="none"/>
+        <path d="M440,400 Q630,200 800,235" stroke="rgba(201,168,76,0.2)" stroke-width="1.5" fill="none"/>
+        <path d="M360,400 Q600,180 800,205" stroke="rgba(201,168,76,0.14)" stroke-width="1" fill="none"/>
+        <path d="M280,400 Q570,160 800,175" stroke="rgba(201,168,76,0.09)" stroke-width="1" fill="none"/>
+        <path d="M200,400 Q540,140 800,150" stroke="rgba(201,168,76,0.06)" stroke-width="1" fill="none"/>
+        <path d="M0,320 Q200,250 400,300" stroke="rgba(201,168,76,0.15)" stroke-width="1" fill="none"/>
+        <path d="M0,360 Q180,280 380,330" stroke="rgba(201,168,76,0.1)" stroke-width="1" fill="none"/>
+        <path d="M0,380 Q160,310 360,350" stroke="rgba(201,168,76,0.07)" stroke-width="1" fill="none"/>
+    </svg>
+    <div class="contribuir-hero-content">
+        <span class="section-tag">Seja um Semeador</span>
+        <h1>Dessa <span>Obra</span></h1>
+        <p>"Quem supre a semente ao que semeia e o pão ao que come também lhe suprirá e aumentará a semente e fará crescer os frutos da sua justiça."</p>
+        <cite>— 2 Coríntios 9:10</cite>
+    </div>
+</section>
+
+<section class="contribuir-section">
+    <div class="container">
+        <div class="contribuir-grid">
+
+            <!-- PIX -->
+            <div class="contribuir-card pix-card">
+                <div class="contribuir-card-header">
+                    <i class="fas fa-qrcode"></i>
+                    <h2>PIX</h2>
+                    <p>Escaneie o QR Code ou copie a chave</p>
+                </div>
+                <div class="qrcode-wrap">
+                    <img src="{{ url_for('static', filename='img/foto7.jpg') }}" alt="QR Code PIX">
+                </div>
+                <div class="pix-chave-box">
+                    <span class="pix-chave-label">Chave PIX (CNPJ)</span>
+                    <span class="pix-chave-valor" id="chave-pix">21.780.676/0001-15</span>
+                </div>
+                <button class="btn-copiar-contribuir" onclick="copiarChavePix()">
+                    <i class="fas fa-copy"></i> Copiar Chave PIX
+                </button>
+            </div>
+
+            <!-- Dados Bancários -->
+            <div class="contribuir-card banco-card">
+                <div class="contribuir-card-header">
+                    <i class="fas fa-university"></i>
+                    <h2>Transferência Bancária</h2>
+                    <p>Banco do Brasil</p>
+                </div>
+                <div class="banco-dados">
+                    <div class="banco-item">
+                        <span class="banco-label">Banco</span>
+                        <span class="banco-valor">Banco do Brasil</span>
+                    </div>
+                    <div class="banco-item">
+                        <span class="banco-label">Agência</span>
+                        <span class="banco-valor">1645-4</span>
+                    </div>
+                    <div class="banco-item">
+                        <span class="banco-label">Conta Corrente</span>
+                        <span class="banco-valor">20704-7</span>
+                    </div>
+                    <div class="banco-item">
+                        <span class="banco-label">CNPJ</span>
+                        <span class="banco-valor">21.780.676/0001-15</span>
+                    </div>
+                    <div class="banco-item">
+                        <span class="banco-label">Favorecido</span>
+                        <span class="banco-valor">Comunidade Cristã Um Novo Tempo</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Versículo rodapé -->
+        <div class="contribuir-versiculo">
+            <i class="fas fa-bible"></i>
+            <blockquote>
+                "Cada um contribua segundo propôs no seu coração, não com tristeza ou por necessidade; porque Deus ama ao que dá com alegria."
+                <cite>— 2 Coríntios 9:7</cite>
+            </blockquote>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function copiarChavePix() {
+    const chave = document.getElementById('chave-pix').textContent;
+    navigator.clipboard.writeText(chave).then(function() {
+        const btn = document.querySelector('.btn-copiar-contribuir');
+        btn.innerHTML = '<i class="fas fa-check"></i> Copiado!';
+        btn.style.background = '#22c55e';
+        setTimeout(function() {
+            btn.innerHTML = '<i class="fas fa-copy"></i> Copiar Chave PIX';
+            btn.style.background = '';
+        }, 2500);
+        showToast('Chave PIX copiada! Deus abençoe sua oferta.', 'success');
+    });
+}
+
+</script>
+{% endblock %}

@@ -1,0 +1,4 @@
+igreja.db
+__pycache__/
+*.pyc
+.env
