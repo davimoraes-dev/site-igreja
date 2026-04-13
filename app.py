@@ -2,25 +2,20 @@ from flask import Flask, render_template, request, redirect, url_for, flash, jso
 import sqlite3
 from datetime import datetime
 import os
-import smtplib
 import threading
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
+import resend
 
-EMAIL_REMETENTE = 'ccristaumnovotempo@gmail.com'
-EMAIL_SENHA = 'krloiwcscwbjmmmc'
+resend.api_key = 're_8JeiWRvX_Bayg5fkfQh7ZTrgB1hHCsdSM'
 EMAIL_DESTINO = 'ccristaumnovotempo@gmail.com'
 
 def enviar_email(assunto, corpo_html):
     try:
-        msg = MIMEMultipart('alternative')
-        msg['Subject'] = assunto
-        msg['From'] = EMAIL_REMETENTE
-        msg['To'] = EMAIL_DESTINO
-        msg.attach(MIMEText(corpo_html, 'html'))
-        with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-            smtp.login(EMAIL_REMETENTE, EMAIL_SENHA)
-            smtp.sendmail(EMAIL_REMETENTE, EMAIL_DESTINO, msg.as_string())
+        resend.Emails.send({
+            'from': 'Site Igreja <onboarding@resend.dev>',
+            'to': EMAIL_DESTINO,
+            'subject': assunto,
+            'html': corpo_html
+        })
     except Exception as e:
         print(f'Erro ao enviar email: {e}')
 
