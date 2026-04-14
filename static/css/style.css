@@ -131,9 +131,9 @@ ul { list-style: none; }
 .logo-subtitle {
     font-family: var(--font-title);
     font-size: 17px;
-    color: var(--gold);
+    color: #C07828;
     font-weight: 700;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     white-space: nowrap;
     line-height: 1.2;
 }
@@ -1574,7 +1574,7 @@ ul { list-style: none; }
     font-family: var(--font-title);
     font-size: 16px;
     font-weight: 700;
-    color: var(--gold);
+    color: #C07828;
 }
 
 .footer-desc {
