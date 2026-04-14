@@ -84,10 +84,16 @@ ul { list-style: none; }
 }
 
 .logo-img {
-    width: 56px;
-    height: 56px;
+    width: 160px;
+    height: 54px;
     object-fit: contain;
     flex-shrink: 0;
+}
+
+.footer-logo-img {
+    width: 160px;
+    height: 54px;
+    object-fit: contain;
 }
 
 .logo-placeholder {
