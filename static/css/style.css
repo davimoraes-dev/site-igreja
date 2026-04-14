@@ -84,8 +84,8 @@ ul { list-style: none; }
 }
 
 .logo-img {
-    width: 180px;
-    height: 60px;
+    width: 56px;
+    height: 56px;
     object-fit: contain;
     flex-shrink: 0;
 }
@@ -118,7 +118,7 @@ ul { list-style: none; }
 
 .logo-title {
     font-family: var(--font-body);
-    font-size: 10px;
+    font-size: 8px;
     font-weight: 500;
     color: #5c3317;
     transition: var(--transition);
@@ -130,7 +130,7 @@ ul { list-style: none; }
 
 .logo-subtitle {
     font-family: var(--font-title);
-    font-size: 14px;
+    font-size: 18px;
     color: #A03D1E;
     font-weight: 800;
     letter-spacing: 1px;
