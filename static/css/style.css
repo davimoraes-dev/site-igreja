@@ -130,7 +130,7 @@ ul { list-style: none; }
 
 .logo-subtitle {
     font-family: var(--font-title);
-    font-size: 18px;
+    font-size: 13px;
     color: #A03D1E;
     font-weight: 800;
     letter-spacing: 1px;
@@ -1573,7 +1573,7 @@ ul { list-style: none; }
 
 .footer-logo p {
     font-family: var(--font-title);
-    font-size: 18px;
+    font-size: 13px;
     font-weight: 800;
     color: #A03D1E;
     letter-spacing: 1px;
