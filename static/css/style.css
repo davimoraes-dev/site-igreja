@@ -1049,6 +1049,35 @@ ul { list-style: none; }
     font-weight: 500;
 }
 
+.culto-especial {
+    border-color: rgba(201,168,76,0.4) !important;
+    background: linear-gradient(160deg, #fffdf7 0%, #fdf5e4 100%) !important;
+}
+
+.culto-badge-especial {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--dark);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 16px;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.culto-ordem {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 16px;
+    font-size: 13px;
+    color: var(--text);
+}
+
 .cultos-aviso {
     margin-top: 48px;
     padding: 20px 28px;
