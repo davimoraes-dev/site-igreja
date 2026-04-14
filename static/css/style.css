@@ -130,7 +130,7 @@ ul { list-style: none; }
 
 .logo-subtitle {
     font-family: var(--font-title);
-    font-size: 20px;
+    font-size: 16px;
     color: #7B3520;
     font-weight: 800;
     letter-spacing: 1px;
