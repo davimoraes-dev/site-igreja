@@ -148,121 +148,82 @@
             <h2 class="section-titulo">Nossos <span>Cultos</span></h2>
             <p class="section-desc">Venha adorar a Deus conosco. Você é sempre bem-vindo!</p>
         </div>
-        <div class="cultos-grid">
 
-            <!-- Domingo Biritiba -->
-            <div class="culto-card culto-especial">
-                <div class="culto-icon">
-                    <i class="fas fa-sun"></i>
+        <!-- Abas -->
+        <div class="cultos-abas-nav">
+            <button class="cultos-aba-btn active" onclick="abrirAba('biritiba', this)">
+                <i class="fas fa-map-marker-alt"></i> Biritiba Mirim
+            </button>
+            <button class="cultos-aba-btn" onclick="abrirAba('mogi', this)">
+                <i class="fas fa-map-marker-alt"></i> Mogi das Cruzes
+            </button>
+        </div>
+
+        <!-- Biritiba -->
+        <div class="cultos-aba-content active" id="aba-biritiba">
+            <div class="cultos-lista">
+                <div class="culto-linha culto-linha-especial">
+                    <div class="cl-icon"><i class="fas fa-sun"></i></div>
+                    <div class="cl-info">
+                        <div class="cl-dia">Domingo</div>
+                        <h3>Culto da Família</h3>
+                        <div class="cl-tags">
+                            <span><i class="fas fa-fire"></i> 1º Dom — ProFÉtico</span>
+                            <span><i class="fas fa-bread-slice"></i> 2º Dom — Santa Ceia</span>
+                        </div>
+                    </div>
+                    <div class="cl-hora">10h / 18h</div>
                 </div>
-                <div class="culto-dia">Domingo</div>
-                <h3>Culto da Família</h3>
-                <div class="culto-horario">
-                    <i class="fas fa-clock"></i>
-                    <span>10h00 / 18h00</span>
+                <div class="culto-linha">
+                    <div class="cl-icon"><i class="fas fa-hands-praying"></i></div>
+                    <div class="cl-info">
+                        <div class="cl-dia">Segunda-feira</div>
+                        <h3>Culto de Oração</h3>
+                    </div>
+                    <div class="cl-hora">19h30</div>
                 </div>
-                <div class="culto-ordem">
-                    <span><i class="fas fa-fire"></i> 1º Dom — ProFÉtico</span>
-                    <span><i class="fas fa-bread-slice"></i> 2º Dom — Santa Ceia</span>
+                <div class="culto-linha">
+                    <div class="cl-icon"><i class="fas fa-bolt"></i></div>
+                    <div class="cl-info">
+                        <div class="cl-dia">Quarta-feira</div>
+                        <h3>Culto de Fé e Milagres</h3>
+                    </div>
+                    <div class="cl-hora">19h30</div>
                 </div>
-                <div class="culto-local">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Biritiba Mirim</span>
+                <div class="culto-linha">
+                    <div class="cl-icon"><i class="fas fa-star"></i></div>
+                    <div class="cl-info">
+                        <div class="cl-dia">Sexta-feira</div>
+                        <h3>Culto Manhã com Deus</h3>
+                    </div>
+                    <div class="cl-hora">07h00</div>
                 </div>
             </div>
+        </div>
 
-            <!-- Domingo Mogi -->
-            <div class="culto-card culto-especial">
-                <div class="culto-icon">
-                    <i class="fas fa-sun"></i>
+        <!-- Mogi -->
+        <div class="cultos-aba-content" id="aba-mogi">
+            <div class="cultos-lista">
+                <div class="culto-linha culto-linha-especial">
+                    <div class="cl-icon"><i class="fas fa-sun"></i></div>
+                    <div class="cl-info">
+                        <div class="cl-dia">Domingo</div>
+                        <h3>Culto da Família</h3>
+                        <div class="cl-tags">
+                            <span><i class="fas fa-bread-slice"></i> 1º Dom — Santa Ceia</span>
+                        </div>
+                    </div>
+                    <div class="cl-hora">10h00</div>
                 </div>
-                <div class="culto-dia">Domingo</div>
-                <h3>Culto da Família</h3>
-                <div class="culto-horario">
-                    <i class="fas fa-clock"></i>
-                    <span>10h00</span>
-                </div>
-                <div class="culto-ordem">
-                    <span><i class="fas fa-bread-slice"></i> 1º Dom — Santa Ceia</span>
-                </div>
-                <div class="culto-local">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Mogi das Cruzes</span>
+                <div class="culto-linha">
+                    <div class="cl-icon"><i class="fas fa-bolt"></i></div>
+                    <div class="cl-info">
+                        <div class="cl-dia">Sexta-feira</div>
+                        <h3>Culto de Fé e Milagres</h3>
+                    </div>
+                    <div class="cl-hora">19h30</div>
                 </div>
             </div>
-
-            <!-- Segunda -->
-            <div class="culto-card">
-                <div class="culto-icon">
-                    <i class="fas fa-hands-praying"></i>
-                </div>
-                <div class="culto-dia">Segunda-feira</div>
-                <h3>Culto de Oração</h3>
-                <div class="culto-horario">
-                    <i class="fas fa-clock"></i>
-                    <span>19h30</span>
-                </div>
-                <p>Noite dedicada à intercessão e comunhão com Deus</p>
-                <div class="culto-local">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Biritiba Mirim</span>
-                </div>
-            </div>
-
-            <!-- Quarta -->
-            <div class="culto-card">
-                <div class="culto-icon">
-                    <i class="fas fa-fire"></i>
-                </div>
-                <div class="culto-dia">Quarta-feira</div>
-                <h3>Culto de Fé e Milagres</h3>
-                <div class="culto-horario">
-                    <i class="fas fa-clock"></i>
-                    <span>19h30</span>
-                </div>
-                <p>Culto de fé com poder e milagres do Espírito Santo</p>
-                <div class="culto-local">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Biritiba Mirim</span>
-                </div>
-            </div>
-
-            <!-- Sexta manhã -->
-            <div class="culto-card">
-                <div class="culto-icon">
-                    <i class="fas fa-cloud-sun"></i>
-                </div>
-                <div class="culto-dia">Sexta-feira</div>
-                <h3>Culto Manhã com Deus</h3>
-                <div class="culto-horario">
-                    <i class="fas fa-clock"></i>
-                    <span>07h00</span>
-                </div>
-                <p>Comece o dia na presença de Deus com louvor e oração</p>
-                <div class="culto-local">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Biritiba Mirim</span>
-                </div>
-            </div>
-
-            <!-- Sexta noite -->
-            <div class="culto-card">
-                <div class="culto-icon">
-                    <i class="fas fa-fire"></i>
-                </div>
-                <div class="culto-dia">Sexta-feira</div>
-                <h3>Culto de Fé e Milagres</h3>
-                <div class="culto-horario">
-                    <i class="fas fa-clock"></i>
-                    <span>19h30</span>
-                </div>
-                <p>Culto de fé com poder e milagres do Espírito Santo</p>
-                <div class="culto-local">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Mogi das Cruzes</span>
-                </div>
-            </div>
-
         </div>
 
         <div class="cultos-aviso">
@@ -271,6 +232,15 @@
         </div>
     </div>
 </section>
+
+<script>
+function abrirAba(id, btn) {
+    document.querySelectorAll('.cultos-aba-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.cultos-aba-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById('aba-' + id).classList.add('active');
+    btn.classList.add('active');
+}
+</script>
 
 <!-- ===== LIDERANÇA ===== -->
 <section class="section lideranca" id="lideranca">
