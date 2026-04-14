@@ -84,8 +84,8 @@ ul { list-style: none; }
 }
 
 .logo-img {
-    width: 64px;
-    height: 64px;
+    width: 180px;
+    height: 60px;
     object-fit: contain;
     flex-shrink: 0;
 }
